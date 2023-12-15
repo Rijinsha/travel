@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .s3{
+                width: 330px;
+                height: 375px;
+                background-color:  rgb(219, 64, 64);
+                margin: 500px;
+                margin-top: 100px;
+                padding: 30px;
+
+            }
+    </style>
+</head>
+<body><center>
+    <h2> {% for msg in messages %}
+          {{msg}}
+          {% endfor %}</h2>
+    <form  method="post" >
+      <div class="s3">
+<!--     using post method we must use csrf-->
+       {% csrf_token %}
+       <h2>REGISTRATION</h2>
+       <input type="text" name="usrname" placeholder="enter you username"><br><br>
+       <input type="text" name="firstname" placeholder="enter you firstname"><br><br>
+       <input type="text" name="lastname" placeholder="enter you lastname"><br><br>
+       <input type="email" name="email" placeholder="enter you email"><br><br>
+       <input type="password" name="password" placeholder="enter you password"><br><br>
+       <input type="password" name="password1" placeholder="conform password"><br><br>
+       <input type="submit">
+      </div>
+   </form>
+<!--message display-->
+
+    </center>
+</body>
+</html>

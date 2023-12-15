@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .s2{
+                width: 300px;
+                height: 175px;
+                background-color:  rgb(219, 64, 64);
+                margin: 500px;
+                margin-top: 100px;
+                padding: 30px;
+
+            }
+    </style>
+</head>
+<body><center>
+
+    <form  method="post">
+        <div class="s2">
+            <h2>LOGIN </h2>
+          {% csrf_token %}
+          <input type="text" name="username"placeholder="enter user name"><br><br>
+          <input type="password" name="password" placeholder="enter password"><br><br>
+          <input type="SUBMIT">
+        </div>
+    </form></center>
+</body>
+</html>
